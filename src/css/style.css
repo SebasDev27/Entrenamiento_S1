@@ -1,75 +1,148 @@
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Open Sans'
 }
-
+/*body design and centering*/
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #000000, #9face6);
+background: linear-gradient(135deg, #000000, #ffffff);
+min-height: 100vh ;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+min-width: 190px;
 }
-
+/* container design*/
 .contenedor {
-    background: rgb(0, 0, 0);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 8px 8px rgb(190, 179, 179);
-    max-width: 400px;
-    width: 100%;
+background: #000000ee;
+padding: 2rem 3rem;
+box-shadow: 10px 10px rgb(255, 255, 255);
+max-width: 500px;
+width: 100%;
+min-width: 190px;
+text-align: center;
+transition: transform 0.3s ease;
+color: white;
+}
+/*container animation*/
+.contenedor:hover {
+transform: scale(1.02);
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px rgb(194, 191, 191);
-    color: white;
+margin-bottom: 1.5rem;
+font-size: 2rem;
+color: #ffffff;
 }
-
+/*design label and input*/
 label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: white;
+display: block;
+margin-top: 1rem;
+font-weight: 600;
+text-align: left;
 }
 
 input {
-    width: 100%;
-    padding: 0.5rem;
+width: 100%;
+padding: 0.8rem;
+margin-top: 0.3rem;
+border: 2px solid #ccc;
+border-radius: 10px;
+font-size: 1rem;
+}
+/*design button*/
+button {
+margin-top: 1.5rem;
+padding: 0.9rem 1.5rem;
+background: linear-gradient(to right, #000000, #8b8989);
+box-shadow: 2px 2px ;
+border: none;
+color: rgb(255, 255, 255);
+font-size: 0.9rem;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s;
+}
+/*button aniumation*/
+button:hover {
+transform: scale(1.05);
+}
+
+/*design message*/
+#message {
+margin-top: 2rem;
+font-size: 1.5rem;
+font-weight: 600;
+color: #ffffff;
+min-height: 40px;
+}
+/*design footer and a*/
+footer {
+width: 100%;
+text-align: center;
+padding: 1rem;
+margin-top: 2rem;
+background-color: #000000;
+color: #ffffff;
+font-size: 0.9rem;
+position: relative;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+/*keeps the footer in pc*/
+
+@media screen and (min-height: 600px) {
+body {
+    flex-direction: column;
+}
+.contenedor {
+    margin-top: 3rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
+}
+
+footer {
+    margin-top: auto;
+}
+}
+
+/*tablets*/
+@media screen and (max-width: 768px) {
+.contenedor {
+    padding: 1.5rem 2rem;
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 1.8rem;
 }
 
 button {
     width: 100%;
-    padding: 0.75rem;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 5px 5px #b4b4b4;
+}
+}
+/*mobile*/
+
+@media screen and (max-width: 480px) {
+.contenedor {
+    padding: 1rem 1.2rem;
 }
 
-button:hover {
-    background-color: #676a6b6e;
+h1 {
+    font-size: 1.5rem;
 }
 
-#message {
-    margin-top: 3rem;
-    margin: 10px;
-    text-align: center;
-    font-size: 1.2rem;
+input {
+    font-size: 0.95rem;
 }
 
-@media (max-width: 500px) {
-    .container {
-        padding: 1rem;
-    }
+button {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+}
 }
